@@ -9,9 +9,9 @@ export const Users = () => {
 
   const columns: ColDef[] = [
     { headerName: "ID", field: "id" },
-    { headerName: "Name", field: "name" },
-    { headerName: "Lastname", field: "lastname" },
-    { headerName: "Email", field: "email" },
+    { headerName: "Name", field: "contrasena" },
+    { headerName: "Lastname", field: "email" },
+    { headerName: "Email", field: "nombre" },
   ];
 
   if (loading) {
