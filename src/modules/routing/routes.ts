@@ -3,6 +3,7 @@ import { About } from "../about/About";
 import { RouteType } from "./routes.types";
 import { Reservation } from "../reservation/Reservation";
 import { Users } from "../users/Users";
+import { Personas } from "../personas/Personas";
 
 export const appRoutes: RouteType[] = [
   {
@@ -28,6 +29,13 @@ export const appRoutes: RouteType[] = [
     name: "UsuariosTemp",
     icon: "pi pi-user",
     component: Users,
+    layout: "/",
+  },
+  {
+    path: "/personas",
+    name: "Personas",
+    icon: "pi pi-personas",
+    component: Personas,
     layout: "/",
   },
 ];
