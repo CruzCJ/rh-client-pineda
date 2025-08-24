@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ErrorResponse } from "react-router-dom";
 import { User } from "../../modules/users/user.types";
 import { useModals } from "../modals/useModals.hook";
-import { dunamisApi } from "../../datasources/dunamisApi.service";
+import { pinedaApi } from "../../datasources/pinedaApi.service";
 
 export const useSignin = () => {
   const { showErrorModal } = useModals();
@@ -13,7 +13,7 @@ export const useSignin = () => {
     password: string
   ): Promise<User | undefined> => {
     try {
-      const response = await dunamisApi.post<User>("/users/signin", {
+      const response = await pinedaApi.post<User>("/users/signin", {
         email,
         password,
       });

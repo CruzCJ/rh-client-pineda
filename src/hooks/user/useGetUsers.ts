@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { UserDb } from "../../modules/users/user.types";
-import { dunamisApi } from "../../datasources/dunamisApi.service";
+import { pinedaApi } from "../../datasources/pinedaApi.service";
 
 export const useGetUsers = () => {
   const [users, setUsers] = useState<UserDb[]>([]);
@@ -10,7 +10,7 @@ export const useGetUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await dunamisApi.get<UserDb[]>("/users");
+        const response = await pinedaApi.get<UserDb[]>("/users");
         setUsers(response.data);
         setLoading(false);
       } catch (err) {
